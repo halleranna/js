@@ -174,3 +174,25 @@ const toEmoticon = emojiName => {
       return '|_(* ~ *)_|';
   }
 }
+
+//isEven() determines if a number is even
+
+const isEven = number => {
+  const remainder = number % 2;
+  switch (remainder) {
+    case 0:
+      return true;
+    default:
+      return false;
+  }
+}
+
+//colorMessage() compares shirt color to favorite color and returns a message
+
+const colorMessage = (favoriteColor, shirtColor) => {
+  if (favoriteColor === shirtColor) {
+    return 'The shirt is your favorite color!';
+  } else if (favoriteColor !== shirtColor) {
+    return 'That is a nice color.'
+  }
+}
