@@ -1,0 +1,115 @@
+//from the codecademy javascript syntax pt. 1 code challenge
+
+//sillySentence() creates a 'silly sentence' using three inputs
+
+const sillySentence = (adjective, verb, noun) => {
+  return `I am so ${adjective} because I ${verb} coding! Time to write some more awesome ${noun}!`
+}
+
+//numImaginaryFriends() calculates the number of a person's imaginary friends assuming it's 1/4 of total friends
+
+const numImaginaryFriends = totalFriends => {
+  const numImaginaryFriends = Math.ceil(totalFriends / 4);
+  return numImaginaryFriends;
+}
+
+//truthyOrFalsy() returns true or false based on whether the value is truthy or falsy
+
+const truthyOrFalsy = input => {
+  if (input) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//calculateWeight() uses earth weight to calculate weight on five other planets
+
+const calculateWeight = (earthWeight, planet) => {
+  if (planet === 'Mercury') {
+    return earthWeight * 0.378;
+  } else if (planet === 'Venus') {
+    return earthWeight * 0.907;
+  } else if (planet === 'Mars') {
+    return earthWeight * 0.377;
+  } else if (planet === 'Jupiter') {
+    return earthWeight * 2.36;
+  } else if (planet === 'Saturn') {
+    return earthWeight * 0.916;
+  } else {
+    return 'Invalid Planet Entry. Try: Mercury, Venus, Mars, Jupiter, or Saturn.';
+  }
+}
+
+//reportingForDuty() takes input of rank and last name to announce a person's reporting status
+
+const reportingForDuty = (rank, lastName) => {
+  return `${rank} ${lastName} reporting for duty!`;
+}
+
+//finalGrade() determines the letter value of a final grade after calculating the average of 3 different scores
+
+const finalGrade = (grade1, grade2, grade3) => {
+  if (grade1 < 0 || grade1 > 100) {
+    return 'You have entered an invalid grade.';
+  }
+  if (grade2 < 0 || grade2 > 100) {
+    return 'You have entered an invalid grade.';
+  }
+  if (grade3 < 0 || grade3 > 100) {
+    return 'You have entered an invalid grade.';
+  }
+  sumOfGrades = grade1 + grade2 + grade3;
+  averageGrade = sumOfGrades / 3;
+  if (averageGrade < 60) {
+    return 'F';
+  } else if (averageGrade < 70) {
+    return 'D';
+  } else if (averageGrade < 80) {
+    return 'C';
+  } else if (averageGrade < 90) {
+    return 'B';
+  } else if (averageGrade <= 100) {
+    return 'A';
+  }
+}
+
+//lifePhase() returns a person's life stage given their age
+
+const lifePhase = age => {
+  if (age > 140 || age < 0) {
+    return 'This is not a valid age';
+  } else if (age <= 3) {
+    return 'baby';
+  } else if (age <= 12) {
+    return 'child';
+  } else if (age <= 19) {
+    return 'teen';
+  } else if (age <= 64) {
+    return 'adult';
+  } else {
+    return 'senior citizen';
+  }
+}
+
+//agreeOrDisagree() compares two strings to determine agreement or disagreement
+
+const agreeOrDisagree = (string1, string2) => {
+  if (string1 === string2) {
+    return 'You agree!';
+  }
+  else {
+    return 'You disagree!';
+  }
+}
+
+//canIVote() returns booleans depending on whether a person meets the legal age requirement
+
+const canIVote = age => {
+  if (age >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
