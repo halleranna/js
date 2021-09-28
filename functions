@@ -113,3 +113,64 @@ const canIVote = age => {
   }
 }
 
+//howOld() determines how old a person will be in any given year (or how many years before they were born) given current age and a year. Not the simplest, but it works
+
+const howOld = (age, year) => {
+  const currentYear = 2021;
+  const birthYear = currentYear - age;
+  if (year > currentYear) {
+    const futureAge = year - birthYear;
+    return `You will be ${futureAge} in the year ${year}`;
+  } else if (year < birthYear) {
+    const yearsBefore = birthYear - year;
+    return `The year ${year} was ${yearsBefore} years before you were born`;
+  } else if (year > birthYear) {
+    const yearDiff = currentYear - year;
+    const pastAge = age - yearDiff;
+    return `You were ${pastAge} in the year ${year}`;
+  }
+}
+
+//tipCalculator() calculates tip based on quality of service and total bill
+const tipCalculator = (quality, total) => {
+  switch (quality) {
+    case 'bad' :
+      return total * 0.05;
+      break;
+    case 'ok' :
+      return total * 0.15;
+      break;
+    case 'good' :
+      return total * 0.20;
+      break;
+    case 'excellent' :
+      return total * 0.30;
+      break;
+    default:
+      return total * 0.18;
+  }
+}
+
+//toEmoji() translates text input into punctuation-based emojis
+
+const toEmoticon = emojiName => {
+  switch (emojiName) {
+    case 'shrug':
+      return '|_{"}_|';
+      break;
+    case 'smiley face':
+      return ':)';
+      break;
+    case 'frowny face':
+      return ':(';
+      break;
+    case 'winky face':
+      return ';)';
+      break;
+    case 'heart':
+      return '<3';
+      break;
+    default:
+      return '|_(* ~ *)_|';
+  }
+}
