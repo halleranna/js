@@ -1,5 +1,3 @@
 # js
 
-dam yup lol
-oops i forgot
-cheater!
+basic javascript code
