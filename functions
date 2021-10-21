@@ -208,3 +208,47 @@ const numberDigits = x => {
     return `The number is: ${x}`;
   }
 }
+
+
+// from Colt Steele's Web Development Bootcamp
+
+// isShortsWeather() tells you whether or not you should wear shorts
+
+function isShortsWeather(temperature) {
+    if (temperature &gt;= 75) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// lastElement() returns the last element in an array
+
+function lastElement(arr) {
+    if (arr.length &gt; 0) {
+        let lastIndex = arr.length - 1;
+        return arr[lastIndex];
+    } else {
+        return null;
+    }
+}
+
+// capitalize() ...capitalizes the first letter of a string
+
+function capitalize(str) {
+    let remainder = str.slice(1);
+    let firstLetter = str[0].toUpperCase();
+    return firstLetter.concat(remainder);
+}
+
+// returnDay() returns the day of the week based on a number... yeah
+
+function returnDay(num) {
+    if (num &gt; 7 || num &lt; 1) {
+        return null;
+    }
+    const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    return days[num - 1];
+}
+
+//
